@@ -1,0 +1,19 @@
+/* global values */
+:root {
+    --jet: #32322e;
+    --charcoal: #374048;
+    --orange: #ca6c37;
+    --indigo: #1b3d5d;
+    --tan: #c8aa8f;
+}
+
+/* universal styles */
+body {
+    background-image: linear-gradient(var(--orange), var(--tan));
+}
+
+/* heading */
+header {
+    display: flex;
+    flex-flow: column, wrap;
+}
