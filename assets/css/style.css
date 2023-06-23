@@ -17,10 +17,6 @@ body {
     font-size: 20px;
 }
 
-.navbar-item a {
-    text-decoration: none;
-}
-
 /* universal flex */
 .flex-container {
     display: flex;
@@ -29,8 +25,8 @@ body {
 
 .flex-item {
     border-radius: 10px;
+    padding: 10px;
     margin: 10px;
-    padding: 10px; 
     border: 3px solid var(--jet);
 }
 
@@ -53,6 +49,11 @@ body {
     flex: 5 1 auto;
 }
 
+.navbar-item a {
+    text-decoration: none;
+    color: var(--tan);
+}
+
 #resume-link {
     margin-left: auto;
     flex: 1 0 auto;
@@ -66,18 +67,90 @@ body {
 /* bio section */
 .bio {
     flex-flow: row wrap;
+    align-items: flex-start;
 }
 
 .selfie {
-    flex: 1 1 auto;
+    flex: 1 0 auto;
     max-width: 300px;
     padding: 0;
-    margin-left: 0;
 }
 
 .about-info {
-    flex: 1 1 auto;
+    flex: 1 1 0;
     flex-flow: column wrap;
+    align-self: stretch;
     padding: 0;
-    margin: 0;
 }
+
+p.bio-item {
+    flex: 1 1 auto;
+}
+
+/* aside */
+.did-you-know {
+    flex-flow: row wrap;
+}
+
+.did-you-button {
+    background-color: var(--tan);
+    width: 350px;
+    transition: width ease-in-out 1s;
+}
+
+.did-you-button:hover {
+    background-color: var(--indigo);
+    color: #fff;
+    width: 300px;
+}
+
+.did-you-button:active {
+    font-size: 95%;
+    box-shadow: 0 0 10px #000 inset;
+}
+
+.did-you-know p {
+    display: none;
+}
+
+.did-you-button:focus p {
+    display: flex;
+}
+
+
+/* footer */
+.end-card {
+    text-align: center;
+    margin: 10px;
+    padding-bottom: 10px;
+}
+
+.contact-list {
+    padding: 5px;
+}
+
+.contact-list::before {
+    margin-right: 5px;
+    background-size: 20px 20px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    content: "";
+}
+
+.twitter::before {
+    background-image: url(../img/Logo_of_Twitter.svg);
+}
+
+.github::before {
+    background-image: url(../img/Octicons-mark-github.svg);
+}
+
+.email::before {
+    background-image: url(../img/Email_Shiny_Icon.svg);
+}
+
+.linkedin::before {
+    background-image: url(../img/Linkedin_icon.svg);
+}
+
