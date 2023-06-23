@@ -37,12 +37,15 @@ body {
 
 .page-heading {
     text-align: center;
+    background-image: url(../img/Parallax_scroll.gif);
+    background-position-y: -20px;
 }
 
 /* navbar */
 .navbar {
     flex-flow: row wrap;
     justify-content: flex-start;
+    background-color: var(--indigo);
 }
 
 .navbar-item {
