@@ -13,8 +13,10 @@ html {
 }
 
 body {
-    background-image: linear-gradient(var(--orange), var(--tan));
+    background-color: var(--jet);
     font-size: 20px;
+    font-family: cursive, sans-serif;
+    color: var(--tan);
 }
 
 /* universal flex */
@@ -27,7 +29,9 @@ body {
     border-radius: 10px;
     padding: 10px;
     margin: 10px;
-    border: 3px solid var(--jet);
+    border: 2px solid var(--jet);
+    background-color: var(--charcoal);
+    box-shadow: 4px 4px var(--orange);
 }
 
 /* heading */
@@ -39,20 +43,30 @@ body {
     text-align: center;
     background-image: url(../img/Parallax_scroll.gif);
     background-position-y: -20px;
+    color: var(--jet);
 }
 
 /* navbar */
 .navbar {
     flex-flow: row wrap;
     justify-content: flex-start;
-    background-color: var(--indigo);
 }
 
 .navbar-item {
     flex: 5 1 auto;
+    opacity: 50%;
 }
 
-.navbar-item a {
+.navbar-item:hover {
+    opacity: 100%;
+}
+
+.navbar-item:active {
+    color: var(--orange);
+    box-shadow: 0 0 10px var(--orange) inset;
+}
+
+.navbar a {
     text-decoration: none;
     color: var(--tan);
 }
@@ -65,6 +79,15 @@ body {
 /* main content */
 .main-content {
     margin: 0 10px;
+}
+
+.parallax-top, .parallax-bottom {
+    background-image: url(../img/Skateboarding_at_Mexico_City_-_Flip_-_120_zeke.jpg);
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /* bio section */
@@ -93,36 +116,37 @@ p.bio-item {
 /* aside */
 .did-you-know {
     flex-flow: row wrap;
+    justify-content: flex-start;
 }
 
-.did-you-button {
-    background-color: var(--tan);
-    width: 350px;
-    transition: width ease-in-out 1s;
+.dyk-item {
+    flex: 1 1 auto;
 }
 
-.did-you-button:hover {
-    background-color: var(--indigo);
-    color: #fff;
-    width: 300px;
+h2.dyk-item {
+    width: 800px;
+    text-align: center;
+    font-size: 120%;
+    transition: width ease-in-out 2s;
 }
 
-.did-you-button:active {
-    font-size: 95%;
-    box-shadow: 0 0 10px #000 inset;
-}
-
-.did-you-know p {
+p.dyk-item {
     display: none;
+    transition: display ease-in 2s;
 }
 
-.did-you-button:focus p {
-    display: flex;
+.did-you-know:hover h2.dyk-item {
+    width: 100px;
+}
+
+.did-you-know:hover p.dyk-item {
+    display: inline-flex;
 }
 
 
 /* footer */
 .end-card {
+    flex-flow: column nowrap;
     text-align: center;
     margin: 10px;
     padding-bottom: 10px;
@@ -139,6 +163,10 @@ p.bio-item {
     width: 20px;
     height: 20px;
     content: "";
+}
+
+.contact-list a {
+    color: var(--orange);
 }
 
 .twitter::before {

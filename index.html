@@ -14,27 +14,29 @@
     <h1 class="flex-item page-heading">Portfolio Showcase</h1>
     <nav class="flex-item">
         <ul class="flex-container navbar">
-            <li class="flex-item navbar-item"><a href="#about-me">About</a></li>
-            <li class="flex-item navbar-item"><a href="">Work</a></li>
-            <li class="flex-item navbar-item"><a href="#contact-me">Contact Me</a></li>
-            <li class="flex-item navbar-item" id="resume-link"><a href="" title="External Link" target="_blank">Resume</a></li>
+            <a href="#about-me" class="flex-item navbar-item"><li>About</li></a>
+            <a href="#work" class="flex-item navbar-item"><li>Work</li></a>
+            <a href="#contact-me" class="flex-item navbar-item"><li>Contact Me</li></a>
+            <a href="" title="External Link" target="_blank" class="flex-item navbar-item" id="resume-link"><li>Resume</li></a>
         </ul>
     </nav>
 </header>
 
 <main class="main-content">
-    <section class="flex-container bio" id="about-me">
-        <img src="./assets/img/20230403_133530.jpg" alt="portrait of Omar Razo" class="flex-item selfie">
-        <div class="flex-container flex-item about-info">
-            <h2 class="flex-item bio-item">Omar Razo</h2>
-            <p class="flex-item bio-item">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse rem, deleniti sapiente accusamus voluptates, quae perferendis facere harum impedit velit totam? Voluptatum eos dolore ex rem ipsum dicta, laborum velit.</p>
-        </div>
-    </section>
+    <div class="parallax-top">
+        <section class="flex-container bio" id="about-me">
+            <img src="./assets/img/20230403_133530.jpg" alt="portrait of Omar Razo" class="flex-item selfie">
+            <div class="flex-container flex-item about-info">
+                <h2 class="flex-item bio-item">Omar Razo</h2>
+                <p class="flex-item bio-item">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse rem, deleniti sapiente accusamus voluptates, quae perferendis facere harum impedit velit totam? Voluptatum eos dolore ex rem ipsum dicta, laborum velit.</p>
+            </div>
+        </section>
 
-    <aside class="flex-container did-you-know">
-        <button class="flex-item did-you-button">Did You Know?</button>
-        <p class="flex-item did-you-speak">I also speak: Spanish, German</p>
-    </aside>
+        <aside class="flex-container did-you-know">
+            <h2 class="flex-item dyk-item">Did You Know?</h2>
+            <p class="flex-item dyk-item">I also speak: Spanish, German</p>
+        </aside>
+    </div>
 
     <section class="work-showcase" id="work">
         <h2>Work</h2>
@@ -64,16 +66,16 @@
         </section>
     </section>
 </main>
-
-<footer class="end-card" id="contact-me">
-    <h2>Get a Hold of Me</h2>
-    <ul>
-        <li class="contact-list twitter">Twitter: <a href="#" target="_blank">@MeetingDoes</a></li>
-        <li class="contact-list github">Github: <a href="https://github.com/Omar-Razo" target="_blank">Omar Razo</a></li>
-        <li class="contact-list email">Email: <a href="mailto: osrazo@ucdavis.edu">osrazo@ucdavis.edu</a></li>
-        <li class="contact-list linkedin">LinkedIn: <a href="" target="_blank">Omar Razo</a></li>
-    </ul>
-
-</footer>
+<div class="parallax-bottom">
+    <footer class="flex-container end-card" id="contact-me">
+        <h2 class="flex-item">Get a Hold of Me</h2>
+        <ul class="flex-item">
+            <li class="contact-list twitter">Twitter: <a href="#" target="_blank">@MeetingDoes</a></li>
+            <li class="contact-list github">Github: <a href="https://github.com/Omar-Razo" target="_blank">Omar Razo</a></li>
+            <li class="contact-list email">Email: <a href="mailto: osrazo@ucdavis.edu">osrazo@ucdavis.edu</a></li>
+            <li class="contact-list linkedin">LinkedIn: <a href="">Omar Razo</a></li>
+        </ul>
+    </footer>
+</div>
 </body>
 </html>
