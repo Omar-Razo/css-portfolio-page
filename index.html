@@ -1,81 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/reset.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Omar Razo: Portfolio</title>
-</head>
+  </head>
 
-<body>
-<header class="flex-container banner">
-    <h1 class="flex-item page-heading">Portfolio Showcase</h1>
-    <nav class="flex-item">
+  <body>
+    <header class="flex-container banner">
+      <h1 class="flex-item page-heading">Portfolio Showcase</h1>
+      <nav class="flex-item">
         <ul class="flex-container navbar">
-            <a href="#about-me" class="flex-item navbar-item"><li>About</li></a>
-            <a href="#work" class="flex-item navbar-item"><li>Work</li></a>
-            <a href="#contact-me" class="flex-item navbar-item"><li>Contact Me</li></a>
-            <a href="" title="External Link" target="_blank" class="flex-item navbar-item" id="resume-link"><li>Resume</li></a>
+          <a href="#about-me" class="flex-item navbar-item"><li>About</li></a>
+          <a href="#projects" class="flex-item navbar-item"
+            ><li>Projects</li></a
+          >
+          <a href="#contact-me" class="flex-item navbar-item"
+            ><li>Contact Me</li></a
+          >
+          <a
+            href=""
+            title="External Link"
+            target="_blank"
+            class="flex-item navbar-item"
+            id="resume-link"
+            ><li>Resume</li></a
+          >
         </ul>
-    </nav>
-</header>
+      </nav>
+    </header>
 
-<main class="main-content">
-    <div class="parallax-top">
+    <main class="main-content">
+      <div class="parallax-top">
         <section class="flex-container bio" id="about-me">
-            <img src="./assets/img/20230403_133530.jpg" alt="portrait of Omar Razo" class="flex-item selfie">
-            <div class="flex-container flex-item about-info">
-                <h2 class="flex-item bio-item">Omar Razo</h2>
-                <p class="flex-item bio-item">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse rem, deleniti sapiente accusamus voluptates, quae perferendis facere harum impedit velit totam? Voluptatum eos dolore ex rem ipsum dicta, laborum velit.</p>
-            </div>
+          <h2>About</h2>
+          <img
+            src="./assets/img/20230403_133530.jpg"
+            alt="portrait of Omar Razo"
+            class="flex-item selfie"
+          />
+          <div class="flex-container flex-item about-info">
+            <h3 class="flex-item bio-item">Omar Razo</h3>
+            <p class="flex-item bio-item">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse
+              rem, deleniti sapiente accusamus voluptates, quae perferendis
+              facere harum impedit velit totam? Voluptatum eos dolore ex rem
+              ipsum dicta, laborum velit.
+            </p>
+          </div>
         </section>
 
         <aside class="flex-container did-you-know">
-            <h2 class="flex-item dyk-item">Did You Know?</h2>
-            <p class="flex-item dyk-item">I also speak: Spanish, German</p>
+          <h2 class="flex-item dyk-item">Did You Know?</h2>
+          <p class="flex-item dyk-item">I also speak: Spanish and German</p>
         </aside>
-    </div>
+      </div>
 
-    <section class="work-showcase" id="work">
-        <h2>Work</h2>
-        <section class="project">
-            <img src="" alt="" class="preview-img">
-            <h3>Major Project: Cool-Name.exe</h3>
-            <h4>Python / Pandas / NumPy</h4>
-            <p>description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis modi autem porro est. Cupiditate libero maiores blanditiis architecto? Repudiandae labore cum eligendi fugit dolores molestiae ratione, a adipisci corporis eos.</p>
+      <section class="flex-container project-showcase" id="projects">
+        <h2>Projects</h2>
+
+        <section class="flex-item flex-container mjr-project">
+          <h3 class="flex-item">Major Project: Cool-Name.exe</h3>
+          <h4 class="flex-item">Python / Pandas / NumPy</h4>
+          <p class="flex-item">
+            description: Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Reiciendis modi autem porro est. Cupiditate libero maiores
+            blanditiis architecto? Repudiandae labore cum eligendi fugit dolores
+            molestiae ratione, a adipisci corporis eos.
+          </p>
+          <a
+            href=""
+            class="flex-container flex-item project-link"
+            title="Click to go to deployment site"
+            ><img
+              src="./assets/img/giphy.gif"
+              alt="placeholder image"
+              class="preview-img"
+          /></a>
         </section>
-        <section class="project">
-            <img src="" alt="" class="preview-img">
-            <h3>Minor Project: name</h3>
-            <h4>languages/tools/libraries used</h4>
-            <p>description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis modi autem porro est. Cupiditate libero maiores blanditiis architecto? Repudiandae labore cum eligendi fugit dolores molestiae ratione, a adipisci corporis eos.</p>
+
+        <section class="flex-item flex-container mnr-project">
+          <h3 class="flex-item">Minor Project: name</h3>
+          <h4 class="flex-item">languages/tools/libraries used</h4>
+          <p class="flex-item">
+            description: Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Reiciendis modi autem porro est. Cupiditate libero maiores
+            blanditiis architecto? Repudiandae labore cum eligendi fugit dolores
+            molestiae ratione, a adipisci corporis eos.
+          </p>
+          <a href="" class="flex-container flex-item project-link"
+            ><img
+              src="./assets/img/flying-witch-01-38-mandrake.jpg"
+              alt="placeholder image"
+              class="preview-img"
+          /></a>
         </section>
-        <section class="project">
-            <img src="" alt="" class="preview-img">
-            <h3>Minor Project: name</h3>
-            <h4>languages/tools/libraries used</h4>
-            <p>description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis modi autem porro est. Cupiditate libero maiores blanditiis architecto? Repudiandae labore cum eligendi fugit dolores molestiae ratione, a adipisci corporis eos.</p>
+
+        <section class="flex-item flex-container mnr-project">
+          <h3 class="flex-item">Minor Project: name</h3>
+          <h4 class="flex-item">languages/tools/libraries used</h4>
+          <p class="flex-item">
+            description: Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Reiciendis modi autem porro est. Cupiditate libero maiores
+            blanditiis architecto? Repudiandae labore cum eligendi fugit dolores
+            molestiae ratione, a adipisci corporis eos.
+          </p>
+          <a href="" class="flex-container flex-item project-link"
+            ><img
+              src="./assets/img/flying-witch-01-38-mandrake.jpg"
+              alt="placeholder image"
+              class="preview-img"
+          /></a>
         </section>
-        <section class="project">
-            <img src="" alt="" class="preview-img">
-            <h3>Minor Project: name</h3>
-            <h4>languages/tools/libraries used</h4>
-            <p>description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis modi autem porro est. Cupiditate libero maiores blanditiis architecto? Repudiandae labore cum eligendi fugit dolores molestiae ratione, a adipisci corporis eos.</p>
+
+        <section class="flex-item flex-container mnr-project">
+          <h3 class="flex-item">Minor Project: name</h3>
+          <h4 class="flex-item">languages/tools/libraries used</h4>
+          <p class="flex-item">
+            description: Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Reiciendis modi autem porro est. Cupiditate libero maiores
+            blanditiis architecto? Repudiandae labore cum eligendi fugit dolores
+            molestiae ratione, a adipisci corporis eos.
+          </p>
+          <a href="" class="flex-container flex-item project-link"
+            ><img
+              src="./assets/img/flying-witch-01-38-mandrake.jpg"
+              alt="placeholder image"
+              class="preview-img"
+          /></a>
         </section>
-    </section>
-</main>
-<div class="parallax-bottom">
-    <footer class="flex-container end-card" id="contact-me">
-        <h2 class="flex-item">Get a Hold of Me</h2>
-        <ul class="flex-item">
-            <li class="contact-list twitter">Twitter: <a href="#" target="_blank">@MeetingDoes</a></li>
-            <li class="contact-list github">Github: <a href="https://github.com/Omar-Razo" target="_blank">Omar Razo</a></li>
-            <li class="contact-list email">Email: <a href="mailto: osrazo@ucdavis.edu">osrazo@ucdavis.edu</a></li>
-            <li class="contact-list linkedin">LinkedIn: <a href="">Omar Razo</a></li>
-        </ul>
+      </section>
+    </main>
+
+    <footer class="flex-container end-card parallax-bottom" id="contact-me">
+      <h2 class="flex-item">Get a Hold of Me</h2>
+      <ul class="flex-item">
+        <li class="contact-list twitter">
+          Twitter: <a href="#" target="_blank">@MeetingDoes</a>
+        </li>
+        <li class="contact-list github">
+          Github:
+          <a href="https://github.com/Omar-Razo" target="_blank">Omar Razo</a>
+        </li>
+        <li class="contact-list email">
+          Email: <a href="mailto: osrazo@ucdavis.edu">osrazo@ucdavis.edu</a>
+        </li>
+        <li class="contact-list linkedin">
+          LinkedIn: <a href="">Omar Razo</a>
+        </li>
+      </ul>
     </footer>
-</div>
-</body>
+  </body>
 </html>

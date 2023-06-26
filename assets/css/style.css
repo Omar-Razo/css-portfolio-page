@@ -19,6 +19,12 @@ body {
     color: var(--tan);
 }
 
+h2 {
+    margin: 10px 0 0 10px;
+    font-size: 120%;
+    width: 100%;
+}
+
 /* universal flex */
 .flex-container {
     display: flex;
@@ -29,9 +35,14 @@ body {
     border-radius: 10px;
     padding: 10px;
     margin: 10px;
-    border: 2px solid var(--jet);
+    border: 2px solid var(--orange);
     background-color: var(--charcoal);
     box-shadow: 4px 4px var(--orange);
+    transition: filter 0.5s;
+}
+
+.flex-item:hover {
+    filter: saturate(1.5)
 }
 
 /* heading */
@@ -83,17 +94,19 @@ body {
 
 .parallax-top, .parallax-bottom {
     background-image: url(../img/Skateboarding_at_Mexico_City_-_Flip_-_120_zeke.jpg);
-    height: 100%;
+    height: 30%;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    border-radius: 10px;
 }
 
 /* bio section */
 .bio {
     flex-flow: row wrap;
     align-items: flex-start;
+    justify-content: center;
 }
 
 .selfie {
@@ -111,11 +124,12 @@ body {
 
 p.bio-item {
     flex: 1 1 auto;
+    min-width: 240px;
 }
 
 /* aside */
 .did-you-know {
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     justify-content: flex-start;
 }
 
@@ -127,7 +141,7 @@ h2.dyk-item {
     width: 800px;
     text-align: center;
     font-size: 120%;
-    transition: width ease-in-out 2s;
+    transition: width ease-in-out 1s;
 }
 
 p.dyk-item {
@@ -143,6 +157,54 @@ p.dyk-item {
     display: inline-flex;
 }
 
+/* Projects */
+.project-showcase {
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.mjr-project {
+    flex-flow: column wrap;
+    flex: 1 1 auto;
+    align-items: flex-start;
+    position: relative;
+}
+
+.mnr-project {
+    max-width: 30%;
+    flex-flow: column wrap;
+    flex: 1 1 auto;
+    align-items: flex-end;
+    position: relative;
+}
+
+.mjr-project > *, .mnr-project > * {
+    flex: 1 1 auto;
+}
+
+.project-link {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    flex-flow: column wrap;
+    position: absolute;
+    top: 0;
+    left: 0;
+    flex: 0 1 auto;
+    transition: opacity 1s;
+}
+
+.preview-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    flex: 0 1 auto;
+    border-radius: 10px;
+}
+
+.mjr-project:hover a, .mnr-project:hover a {
+    opacity: 5%;
+}
 
 /* footer */
 .end-card {
@@ -185,3 +247,29 @@ p.dyk-item {
     background-image: url(../img/Linkedin_icon.svg);
 }
 
+/* media queries */
+
+@media screen and (max-width: 975px) {
+    .project-showcase {
+        flex-flow: column wrap;
+        align-items: center;
+    }
+
+    .mnr-project {
+        width: 90%;
+        max-width: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .flex-item {
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .mnr-project {
+        width: auto;
+        max-width: none;
+    }
+}
