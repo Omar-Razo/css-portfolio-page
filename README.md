@@ -61,7 +61,7 @@ N/A
 
 ## Testing
 
-Chrome DevTools were used to test various screen resolutions and aspect ratios
+Chrome DevTools were used to test various viewports.
 
 1. F12 - open Chrome DevTools
 2. Ctrl + Shift + M - Toggle device toolbar
