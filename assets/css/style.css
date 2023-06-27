@@ -13,11 +13,16 @@ html {
 }
 
 body {
-    background-image: linear-gradient(var(--orange), var(--tan));
+    background-color: var(--jet);
+    font-size: 20px;
+    font-family: Helvetica, cursive, sans-serif;
+    color: var(--tan);
 }
 
-.navbar-item a {
-    text-decoration: none;
+h2:not(.flex-item) {
+    margin: 10px 0 0 10px;
+    font-size: 120%;
+    width: 100%;
 }
 
 /* universal flex */
@@ -28,9 +33,16 @@ body {
 
 .flex-item {
     border-radius: 10px;
-    margin: 10px;
     padding: 10px;
-    border: 2px solid var(--jet);
+    margin: 10px;
+    border: 2px solid var(--orange);
+    background-color: var(--charcoal);
+    box-shadow: 4px 4px var(--orange);
+    transition: filter 0.5s;
+}
+
+.flex-item:hover {
+    filter: saturate(1.5)
 }
 
 /* heading */
@@ -40,6 +52,9 @@ body {
 
 .page-heading {
     text-align: center;
+    background-image: url(../img/Parallax_scroll.gif);
+    background-position-y: -20px;
+    color: var(--jet);
 }
 
 /* navbar */
@@ -49,15 +64,212 @@ body {
 }
 
 .navbar-item {
-    flex: 1 1 auto;
+    flex: 5 1 auto;
+    opacity: 50%;
+}
+
+.navbar-item:hover {
+    opacity: 100%;
+}
+
+.navbar-item:active {
+    color: var(--orange);
+    box-shadow: 0 0 10px var(--orange) inset;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: var(--tan);
 }
 
 #resume-link {
     margin-left: auto;
-    flex: 0 0 auto;
+    flex: 1 0 auto;
 }
 
 /* main content */
-main {
+.main-content {
     margin: 0 10px;
+}
+
+.parallax-top, .parallax-bottom {
+    background-image: url(../img/Skateboarding_at_Mexico_City_-_Flip_-_120_zeke.jpg);
+    height: 30%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+/* bio section */
+.bio {
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.selfie {
+    flex: 1 0 auto;
+    max-width: 300px;
+    padding: 0;
+}
+
+.about-info {
+    flex: 1 1 0;
+    flex-flow: column wrap;
+    align-self: stretch;
+    padding: 0;
+}
+
+p.bio-item {
+    flex: 1 1 auto;
+    min-width: 240px;
+}
+
+/* aside */
+.did-you-know {
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+}
+
+.dyk-item {
+    flex: 1 1 auto;
+}
+
+h2.dyk-item {
+    width: 800px;
+    text-align: center;
+    font-size: 120%;
+    transition: width ease-in-out 1s;
+}
+
+p.dyk-item {
+    display: none;
+    transition: display ease-in 2s;
+}
+
+.did-you-know:hover h2.dyk-item {
+    width: 100px;
+}
+
+.did-you-know:hover p.dyk-item {
+    display: inline-flex;
+}
+
+/* Projects */
+.project-showcase {
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.mjr-project {
+    flex-flow: column wrap;
+    flex: 1 1 auto;
+    align-items: flex-start;
+    position: relative;
+}
+
+.mnr-project {
+    max-width: 30%;
+    flex-flow: column wrap;
+    flex: 1 1 auto;
+    align-items: flex-end;
+    position: relative;
+}
+
+.mjr-project > *, .mnr-project > * {
+    flex: 1 1 auto;
+}
+
+.project-link {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    flex-flow: column wrap;
+    position: absolute;
+    top: 0;
+    left: 0;
+    flex: 0 1 auto;
+    transition: opacity 1s;
+}
+
+.preview-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    flex: 0 1 auto;
+    border-radius: 10px;
+}
+
+.mjr-project:hover a, .mnr-project:hover a {
+    opacity: 5%;
+}
+
+/* footer */
+.end-card {
+    flex-flow: column nowrap;
+    text-align: center;
+    margin: 10px;
+    padding-bottom: 10px;
+}
+
+.contact-list {
+    padding: 5px;
+}
+
+.contact-list::before {
+    margin-right: 5px;
+    background-size: 20px 20px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    content: "";
+}
+
+.contact-list a {
+    color: var(--orange);
+}
+
+.twitter::before {
+    background-image: url(../img/Logo_of_Twitter.svg);
+}
+
+.github::before {
+    background-image: url(../img/Octicons-mark-github.svg);
+}
+
+.email::before {
+    background-image: url(../img/Email_Shiny_Icon.svg);
+}
+
+.linkedin::before {
+    background-image: url(../img/Linkedin_icon.svg);
+}
+
+/* media queries */
+
+@media screen and (max-width: 975px) {
+    .project-showcase {
+        flex-flow: column wrap;
+        align-items: center;
+    }
+
+    .mnr-project {
+        width: 90%;
+        max-width: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .flex-item {
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .mnr-project {
+        width: auto;
+        max-width: none;
+    }
 }
