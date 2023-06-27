@@ -15,11 +15,11 @@ html {
 body {
     background-color: var(--jet);
     font-size: 20px;
-    font-family: cursive, sans-serif;
+    font-family: Helvetica, cursive, sans-serif;
     color: var(--tan);
 }
 
-h2 {
+h2:not(.flex-item) {
     margin: 10px 0 0 10px;
     font-size: 120%;
     width: 100%;
@@ -160,7 +160,7 @@ p.dyk-item {
 /* Projects */
 .project-showcase {
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .mjr-project {
