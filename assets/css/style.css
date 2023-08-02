@@ -166,8 +166,14 @@ p.dyk-item {
 .mjr-project {
     flex-flow: column wrap;
     flex: 1 1 auto;
+    width: 100%;
+    min-height: 500px;
     align-items: flex-start;
     position: relative;
+}
+
+.mjr-project ul {
+    flex-flow: column wrap;
 }
 
 .mnr-project {
@@ -179,7 +185,7 @@ p.dyk-item {
 }
 
 .mjr-project > *, .mnr-project > * {
-    flex: 1 1 auto;
+    flex: 0 1 auto;
 }
 
 .project-link {
