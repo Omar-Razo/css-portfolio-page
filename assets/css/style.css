@@ -180,12 +180,20 @@ p.dyk-item {
     max-width: 30%;
     flex-flow: column wrap;
     flex: 1 1 auto;
-    align-items: flex-end;
+    align-items: flex-start;
     position: relative;
 }
 
-.mjr-project > *, .mnr-project > * {
+.mjr-project > * {
     flex: 0 1 auto;
+}
+
+.mnr-project > * {
+    flex: 0 1 auto;
+}
+
+.mnr-project ul {
+    flex-flow: column wrap;
 }
 
 .project-link {
